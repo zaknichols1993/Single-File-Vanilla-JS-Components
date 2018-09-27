@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <title>Hello, world!</title>
+</head>
+
+<body class="text-center">
+
+  <h1>if else and else-if statement's.</h1>
+  <label for="weather">Select the number of bedroom's.</label>
+  <select id="bedRooms">
+    <option value="">--Select Bedroom's--</option>
+    <option value="oneRoom">1</option>
+    <option value="twoRooms">2</option>
+    <option value="threeRooms">3</option>
+    <option value="fourRooms">4</option>
+  </select>
+
+  <p id="result"></p>
+
+</body>
+</html>
+
+<script>
+
+  var select = document.getElementById('bedRooms');
+  var text = document.getElementById('result');
+
+  select.addEventListener('change', setWeather);
+
+  function setWeather() {
+    var choice = select.value;
+
+    if (choice === 'oneRoom') {
+      text.textContent = 'You\'ve chosen one bedrooms.';
+    } else if (choice === 'twoRooms') {
+      text.textContent = 'You\'ve chosen two bedrooms.';
+    } else if (choice === 'threeRooms') {
+      text.textContent = 'You\'ve chosen three bedrooms.';
+    } else if (choice === 'fourRooms') {
+      text.textContent = 'You\'ve chosen four bedrooms.';
+    } else {
+      text.textContent = '';
+    }
+  }
+
+</script>
+
+<style>
+  .text-center {
+    margin-top: 50px;
+  }
+</style>
