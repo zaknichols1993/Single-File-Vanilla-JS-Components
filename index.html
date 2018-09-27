@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-  <title>Hello, world!</title>
+  <title>Single File Vanilla JS Components!</title>
 </head>
 
 <body class="text-center">
 
   <h1>if else and else-if statement's.</h1>
-  <label for="weather">Select the number of bedroom's.</label>
+  <label for="bedRooms">Select the number of bedroom's.</label>
   <select id="bedRooms">
     <option value="">--Select Bedroom's--</option>
     <option value="oneRoom">1</option>
@@ -28,24 +28,24 @@
 
 <script>
 
-  var select = document.getElementById('bedRooms');
-  var text = document.getElementById('result');
+  var bedRooms = document.getElementById('bedRooms');
+  var result = document.getElementById('result');
 
-  select.addEventListener('change', setWeather);
+  bedRooms.addEventListener('change', selectRooms);
 
-  function setWeather() {
-    var choice = select.value;
+  function selectRooms() {
+    var choice = bedRooms.value;
 
     if (choice === 'oneRoom') {
-      text.textContent = 'You\'ve chosen one bedrooms.';
+      result.textContent = 'You\'ve chosen one bedrooms.';
     } else if (choice === 'twoRooms') {
-      text.textContent = 'You\'ve chosen two bedrooms.';
+      result.textContent = 'You\'ve chosen two bedrooms.';
     } else if (choice === 'threeRooms') {
-      text.textContent = 'You\'ve chosen three bedrooms.';
+      result.textContent = 'You\'ve chosen three bedrooms.';
     } else if (choice === 'fourRooms') {
-      text.textContent = 'You\'ve chosen four bedrooms.';
+      result.textContent = 'You\'ve chosen four bedrooms.';
     } else {
-      text.textContent = '';
+      result.textContent = '';
     }
   }
 
